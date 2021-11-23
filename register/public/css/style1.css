@@ -1,0 +1,85 @@
+body{ 
+    background-color: lightgray;
+}
+p{
+    text-align: center;
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top:50px;
+}
+#user{
+    color:red;
+    font-size: 30px;
+   
+}
+#button {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid red; margin-left:50px;
+    background-color: whithe;
+  }
+ #skip{
+     margin-left:10px;
+ } 
+ #form{
+     margin-left:520px;
+ }
+ #submit{
+    margin-left:10px;
+ }
+ #tour{
+     font-size:30px;
+     color: indigo;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ .ab{
+     width:0px;
+ }
+ .center {
+    display:inline;
+    
+  }
+
+  .form-input {
+    width:200px;
+    padding:3px;
+    
+    
+  }
+  .form-input input {
+    display:none;
+    margin:500px;
+    
+  }
+  
+
+  .form-input img {
+    width:150px;
+    height: 150px;
+    bottom: 114px;
+    left: 68%;
+    border-radius: 50%;
+    margin-left:60px;
+  }
+
+  .imgRemove{
+    position: relative;
+    bottom: 60px;
+    left: 68%;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    outline: none;
+  }
+  .imgRemove::after{
+    content: ' \21BA';
+    color: #fff;
+    font-weight: 900;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .small{
+    color: firebrick;
+  } 
+  
