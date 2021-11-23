@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <head>
+        
+        <link rel="stylesheet" href="/css/style1.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+      
+   
+    <script src="/js/script2"></script>
+    <body >
+        <div  style="margin-top:-20px; width:98.8%;">
+            <div class="row">
+              <div class="col-sm-7" id="col1"></div>
+              <div class="col-sm-5" id="col2"><p> Welcome to Tourgether<br><i id="user"> <%= u %></i>  </p>
+
+                <form method="post" id="form" action='/login/image'>
+                  <div class="image-upload-one">
+                    <div class="center">
+                      <div class="form-input">
+                        <label for="file-ip-1">
+                          <img id="file-ip-1-preview" src="https://e7.pngegg.com/pngimages/130/10/png-clipart-management-organization-logo-person-retail-clothing-accessories-service-retail.png">
+                          <button type="button" class="imgRemove" accept="image/*" onclick="myImgRemoveFunctionOne()"></button>
+                        </label>
+                        <input type="file"  name="img_one" id="file-ip-1" accept="image/*" onchange="showPreviewOne(event);">
+                      </div>
+                    </div>
+                  </div> 
+                
+                  <input type="text" id="birthday" name="username" value="<%= u %>" hidden>
+                
+                  <label for="birthday">Birthday:</label><br>
+                  <input type="date" id="birthday" name="birthday" class="width" >
+                  
+                
+                  <br><br>
+                <label>An other address-email:</label> <br>
+                <input type="email" name="EMAIL"  placeholder="
+                email" class="width"/>
+                <br><br>
+                <label>
+                  Phone :
+                  </label> <br>
+                
+                  <select >
+                    <option value="+216" name="Tunis" default>+216</option>
+                    <option value="+216" name="Tunis" default>+216</option>
+                    <option value="+216" name="Tunis" default>+216</option>
+                    <option value="+216" name="Tunis" default>+216</option>
+                    
+                  </select>  
+                  <input type="tel"  name="phone"  placeholder="phone number" pattern="[0-9]{8}" id="widthphone" /> <br><br>
+                 
+                 
+                <label>
+                  Gender :  
+                  <input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Male</label>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">Female</label>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">Other</label>
+                </label>
+                <br><br>
+                <label>Country:
+                  <select name="country">
+                    <option value="Tunis" name="Tunis" default>Tunis</option>
+                    <option value="Maroc" name="Maroc">Maroc</option>
+                    <option value="libye" name="libye">libye</option>
+                    <option value="Algérie" name="ALG">Algérie</option>
+                    <option value="Moritania" name="MORITANIA">Moritania</option>
+                  </select></label>
+                  <br><br>
+              
+                  
+                    
+           <button type="butto" class="btn btn-primary" style="font-size: 15px;" onclick="register()">Register</button>
+                    <button type="button" class="btn btn-secondary" style="font-size: 15px;">Skip</button>
+                
+             
+                </form>  </div>
+            
+            </div></div>
+           
+        
+
+
+
+
+
+</body>
+</html>
