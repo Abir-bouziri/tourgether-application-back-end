@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style1.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+      
+    <script type="text/javascript">
+      function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+        function showPreviewOne(event){
+          if(event.target.files.length > 0){
+            let src = URL.createObjectURL(event.target.files[0]);
+            let preview = document.getElementById("file-ip-1-preview");
+            preview.src = src;
+            preview.style.display = "block";
+          } 
+        }
+        function myImgRemoveFunctionOne() {
+          document.getElementById("file-ip-1-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+        }
+  </script>
+    <script src="script2"></script>
+    <body >
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#" id="tour">Tourgether</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Contacter nous</a></li>
+                <li><a href="#">Social média</a></li>
+                <li><a href="#">voyage organisé</a></li>
+                <li><a href="#">voyage  non organisé</a></li>
+                <li><a href="#"></a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+               
+               <li><a href="#"><span class="glyphicon glyphicon-user"></span><%= u %> </a></li>
+                <li><a href="http://localhost:8080/logout"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+              </ul>
+            </div>
+          </nav>
+<p> Welcome to Tourgether<br><i id="user"><%= u %></i>  </p>
+
+    <form method="post" id="form" action='/image'>
+      <div class="image-upload-one">
+        <div class="center">
+          <div class="form-input">
+            <label for="file-ip-1">
+              <img id="file-ip-1-preview" src="https://i.ibb.co/ZVFsg37/default.png">
+              <button type="button" class="imgRemove" accept="image/*" onclick="myImgRemoveFunctionOne()"></button>
+            </label>
+            <input type="file"  name="img_one" id="file-ip-1" accept="image/*" onchange="showPreviewOne(event);">
+          </div>
+        </div>
+      </div> 
+    <label>
+    Gender :  
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+  </label><br> <br>
+  <label>
+    Phone :  
+    </label> 
+    <input type="text" value="+216" size="2"/>   
+    <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{8}" required/> <br><br>
+    <label>Country:
+    <select name="country">
+      <option value="Tunis" name="Tunis" default>Tunis</option>
+      <option value="Maroc" name="Maroc">Maroc</option>
+      <option value="libye" name="libye">libye</option>
+      <option value="Algérie" name="ALG">Algérie</option>
+      <option value="Moritania" name="MORITANIA">Moritania</option>
+    </select></label>
+    <br><br> 
+   <label>An other address-email:</label> 
+    <input type="email" name="EMAIL"  />
+    <br>
+    <label><br>
+    <div class="row">
+      <button type="submit" class="submit-btt">Register</button>
+    <input type="button" id="skip" value="Skip"/> </label>
+  </div>
+</form>  
+
+
+
+
+</body>
+</html>
